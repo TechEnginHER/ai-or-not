@@ -124,7 +124,7 @@ function switchScreen(screenName) {
 
 async function loadRound({ initial = false } = {}) {
     if (gameState.currentScenarioIndex >= scenarios.length) {
-        endGame('Simulation Complete.');
+        endGame('End');
         return;
     }
 
@@ -183,6 +183,7 @@ function handleChoice(userChoice) {
     if (userChoseAi === isAi) {
         // CORRECT
         gameState.score++;
+        updateHUD();
         flashFeedback('green');
         nextRound();
     } else {
