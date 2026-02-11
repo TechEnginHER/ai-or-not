@@ -1,0 +1,212 @@
+﻿[
+    {
+        "id":  1,
+        "type":  "image",
+        "src":  "media/real-1.avif",
+        "isAI": false
+    },
+    {
+        "id":  2,
+        "type":  "image",
+        "src":  "media/real-2.avif",
+        "isAI": false
+    },
+    {
+        "id":  3,
+        "type":  "image",
+        "src":  "media/real-3.avif",
+        "isAI": false
+    },
+    {
+        "id":  4,
+        "type":  "image",
+        "src":  "media/real-4.avif",
+        "isAI": false
+    },
+    {
+        "id":  5,
+        "type":  "image",
+        "src":  "media/real-5.avif",
+        "isAI": false
+    },
+    {
+        "id":  6,
+        "type":  "image",
+        "src":  "media/real-6.avif",
+        "isAI": false
+    },
+    {
+        "id":  7,
+        "type":  "image",
+        "src":  "media/real-7.avif",
+        "isAI": false
+    },
+    {
+        "id":  8,
+        "type":  "image",
+        "src":  "media/real-8.avif",
+        "isAI": false
+    },
+    {
+        "id":  9,
+        "type":  "image",
+        "src":  "media/real-9.avif",
+        "isAI": false
+    },
+    {
+        "id":  10,
+        "type":  "image",
+        "src":  "media/real-10.avif",
+        "isAI": false
+    },
+    {
+        "id":  11,
+        "type":  "image",
+        "src":  "media/real-11.avif",
+        "isAI": false
+    },
+    {
+        "id":  12,
+        "type":  "image",
+        "src":  "media/real-12.avif",
+        "isAI": false
+    },
+    {
+        "id":  13,
+        "type":  "image",
+        "src":  "media/real-13.avif",
+        "isAI": false
+    },
+    {
+        "id":  14,
+        "type":  "image",
+        "src":  "media/real-14.avif",
+        "isAI": false
+    },
+    {
+        "id":  15,
+        "type":  "image",
+        "src":  "media/real-15.avif",
+        "isAI": false
+    },
+    {
+        "id":  16,
+        "type":  "image",
+        "src":  "media/real-16.avif",
+        "isAI": false
+    },
+    {
+        "id":  17,
+        "type":  "image",
+        "src":  "media/real-17.avif",
+        "isAI": false
+    },
+    {
+        "id":  18,
+        "type":  "image",
+        "src":  "media/real-18.avif",
+        "isAI": false
+    },
+    {
+        "id":  19,
+        "type":  "image",
+        "src":  "media/real-19.avif",
+        "isAI": false
+    },
+    {
+        "id":  20,
+        "type":  "image",
+        "src":  "media/real-20.avif",
+        "isAI": false
+    },
+    {
+        "id":  21,
+        "type":  "image",
+        "src":  "media/ai-1.png",
+        "isAI": true
+    },
+    {
+        "id":  22,
+        "type":  "image",
+        "src":  "media/ai-2.png",
+        "isAI": true
+    },
+    {
+        "id":  23,
+        "type":  "image",
+        "src":  "media/ai-3.png",
+        "isAI": true
+    },
+    {
+        "id":  24,
+        "type":  "image",
+        "src":  "media/ai-4.png",
+        "isAI": true
+    },
+    {
+        "id":  25,
+        "type":  "image",
+        "src":  "media/ai-5.png",
+        "isAI": true
+    },
+    {
+        "id":  26,
+        "type":  "image",
+        "src":  "media/ai-6.png",
+        "isAI": true
+    },
+    {
+        "id":  27,
+        "type":  "image",
+        "src":  "media/ai-7.png",
+        "isAI": true
+    },
+    {
+        "id":  28,
+        "type":  "image",
+        "src":  "media/ai-8.png",
+        "isAI": true
+    },
+    {
+        "id":  29,
+        "type":  "image",
+        "src":  "media/ai-9.png",
+        "isAI": true
+    },
+    {
+        "id":  30,
+        "type":  "image",
+        "src":  "media/ai-10.png",
+        "isAI": true
+    },
+    {
+        "id":  31,
+        "type":  "image",
+        "src":  "media/ai-11.png",
+        "isAI": true
+    },
+    {
+        "id":  32,
+        "type":  "image",
+        "src":  "media/ai-12.png",
+        "isAI": true
+    },
+    {
+        "id":  33,
+        "type":  "image",
+        "src":  "media/ai-13.png",
+        "isAI": true
+    },
+    {
+        "id":  34,
+        "type":  "image",
+        "src":  "media/ai-14.png",
+        "isAI": true
+    },
+    {
+        "id":  35,
+        "type":  "image",
+        "src":  "media/ai-15.png",
+        "isAI": true
+    }
+]  

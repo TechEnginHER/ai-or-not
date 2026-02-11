@@ -1,0 +1,260 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+:root {
+    --bg-color: #050505;
+    --text-primary: #e6e6e6;
+    --accent-real: #00ff9d; /* Matrix Green */
+    --accent-ai: #ff0055;   /* Cyber Red */
+    --ui-border: #2a2a2a;
+    --panel: #0b0b0b;
+    --panel-strong: #101010;
+    --muted: #8b8b8b;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-display: 'Space Grotesk', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image:
+        radial-gradient(circle at 10% 10%, rgba(0, 255, 157, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 85, 0.06), transparent 35%),
+        linear-gradient(180deg, #050505 0%, #070707 60%, #040404 100%);
+}
+
+
+/* CRT Scanline Overlay */
+.crt-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#app-container {
+    width: 92%;
+    max-width: 720px;
+    text-align: center;
+    border: 1px solid var(--ui-border);
+    padding: 2.5rem;
+    position: relative;
+    background: var(--panel);
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.08), inset 0 0 40px rgba(0, 0, 0, 0.35);
+    border-radius: 14px;
+}
+
+/* Utility Classes */
+.hidden { display: none !important; }
+.active { display: block; }
+
+h1 {
+    font-size: 3.1rem;
+    letter-spacing: 6px;
+    margin-bottom: 0.6rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+}
+.subtitle { color: var(--muted); margin-bottom: 2rem; }
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.mission-brief {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #c8c8c8;
+}
+
+/* Buttons */
+.primary-btn {
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.12), rgba(0, 255, 157, 0.02));
+    border: 1px solid rgba(0, 255, 157, 0.5);
+    color: var(--text-primary);
+    padding: 1rem 2.6rem;
+    font-family: var(--font-display);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.primary-btn:hover {
+    background: rgba(0, 255, 157, 0.18);
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(0, 255, 157, 0.35);
+}
+
+/* HUD & Timer */
+.hud-top { display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: bold; }
+
+.timer-bar-container {
+    width: 100%;
+    height: 4px;
+    background: #333;
+    margin-bottom: 1.5rem;
+}
+
+#timer-bar {
+    height: 100%;
+    background: var(--text-primary);
+    width: 100%;
+    transition: width linear;
+}
+
+/* Media Viewport */
+.media-viewport {
+    height: clamp(240px, 46vh, 420px);
+    background: #111;
+    border: 1px dashed var(--ui-border);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#media-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-viewport img, .media-viewport video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Choice Buttons */
+.controls { display: flex; gap: 1rem; }
+.choice-btn {
+    flex: 1;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--ui-border);
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+}
+.choice-btn:hover { background: #222; }
+
+/* Result Screen */
+.stats-box { border: 1px solid var(--ui-border); padding: 1rem; margin: 2rem 0; }
+.manifesto { font-size: 0.9rem; color: #aaa; margin-bottom: 2rem; border-top: 1px solid #333; padding-top: 1rem;}
+
+/* Start Screen */
+.start-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.start-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.start-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.rule-card {
+    background: var(--panel-strong);
+    border: 1px solid var(--ui-border);
+    padding: 1rem;
+    text-align: left;
+    border-radius: 10px;
+    min-height: 110px;
+}
+
+.rule-card h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.rule-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.start-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid var(--ui-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #090909;
+}
+
+.meta-item {
+    padding: 0.9rem 0.8rem;
+    border-right: 1px solid var(--ui-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.meta-item:last-child { border-right: none; }
+
+.meta-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.meta-value {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
+
+.start-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.start-hint {
+    max-width: 520px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    #app-container { padding: 2rem 1.6rem; }
+    h1 { font-size: 2.3rem; letter-spacing: 3px; }
+    .start-grid { grid-template-columns: 1fr; }
+    .start-meta { grid-template-columns: 1fr; }
+    .meta-item { border-right: none; border-bottom: 1px solid var(--ui-border); }
+    .meta-item:last-child { border-bottom: none; }
+    .media-viewport { height: clamp(220px, 40vh, 340px); }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI or Not?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="crt-overlay"></div> <main id="app-container">
+        <section id="start-screen" class="active">
+            <div class="start-frame">
+                <div class="start-header">
+                    <p class="eyebrow">DISCLAIMER: Self-identification is the only ethical means of detecting AI content</p>
+                    <h1>AI OR NOT</h1>
+                    <p class="mission-brief">Classify each sample before the counter drains.</p>
+                </div>
+
+                <div class="start-grid">
+                    <div class="rule-card">
+                        <h3>Objective</h3>
+                        <p>Identify whether each asset is human or a deepfake.</p>
+                    </div>
+                    <div class="rule-card">
+                        <h3>Timer</h3>
+                        <p>Every round is timed. Hesitation counts as failure.</p>
+                    </div>
+                    <div class="rule-card">
+                        <h3>Strikes</h3>
+                        <p>You have three strikes. The fourth ends the run.</p>
+                    </div>
+                </div>
+
+                <div class="start-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Rounds</span>
+                        <span class="meta-value">∞</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Time / Round</span>
+                        <span class="meta-value">10s</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Mode</span>
+                        <span class="meta-value">Endless</span>
+                    </div>
+                </div>
+
+                <div class="start-actions">
+                    <button id="start-btn" class="primary-btn">Begin</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-screen" class="hidden">
+            <div class="hud-top">
+                <div class="lives">LIVES: <span id="lives-count">♥♥♥</span></div>
+                <div class="score">SCORE: <span id="score-count">0</span></div>
+            </div>
+            
+            <div class="timer-bar-container">
+                <div id="timer-bar"></div>
+            </div>
+
+            <div class="media-viewport">
+                <div id="media-content"></div> 
+            </div>
+
+            <div class="controls">
+                <button class="choice-btn real" data-type="real">HUMAN</button>
+                <button class="choice-btn ai" data-type="ai">AI</button>
+            </div>
+        </section>
+
+        <section id="result-screen" class="hidden">
+            <h2 id="end-title">END</h2>
+            <div class="stats-box">
+                <p>Final Score: <span id="final-score">0</span></p>
+                
+            </div>
+            <div class="manifesto">
+                <p><strong>SYSTEM MESSAGE:</strong></p>
+                <p>You relied on visual cues. They are easily forged.
+                    <br>The only reliable detection is 
+                    <strong>Self-Identification</strong> 
+                    </p>
+            </div>
+            <button id="restart-btn" class="primary-btn">TRY AGAIN</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
