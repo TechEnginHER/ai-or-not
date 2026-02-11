@@ -1,6 +1,6 @@
 // --- CONFIGURATION ---
 const INITIAL_LIVES = 3;
-const TIME_PER_ROUND = 5000; // 5 seconds per round
+const TIME_PER_ROUND = 10000; // 5 seconds per round
 const IMAGE_LOAD_TIMEOUT_MS = 10000;
 
 // --- DATA SOURCE (The "Content") ---
