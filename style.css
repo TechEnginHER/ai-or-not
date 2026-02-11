@@ -242,6 +242,21 @@ h1 {
     align-items: center;
 }
 
+.round-loader {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #c8c8c8;
+    background: linear-gradient(180deg, rgba(4, 4, 4, 0.92), rgba(10, 10, 10, 0.85));
+    z-index: 2;
+}
+
 .start-hint {
     max-width: 520px;
     font-size: 0.85rem;
